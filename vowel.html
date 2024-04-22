@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            color: rgb(60, 60, 60);
+        }
+        .background {
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .box {
+            background-color: white;
+            height: 400px;
+            width: 350px;
+            border-radius: 20px;
+            margin-top: 150px;
+            border: 1px solid black;
+            padding-left: 30px;
+        }
+
+        input {
+            height: 30px;
+            width: 310px;
+            border-radius: 10px;
+            border: 1px solid rgb(175, 175, 175);
+        }
+
+        button {
+            background-color: rgb(36, 36, 230);
+            color: lavender;
+            height: 40px;
+            width: 315px;
+            border-radius: 10px;
+            font-size: large;
+        }
+    </style>
+
+    <script>
+        function checkvowel() {
+            let x = document.getElementById("input").value;
+
+            if (x == "a" || x == "e" ||x == "i" || x == "o" ||x == "u") {
+                document.getElementById("display").innerHTML = "Yes it's a vowel";
+            } else {
+                document.getElementById("display").innerHTML = "No It's a consonent";
+            }
+        }
+    </script>
+
+</head>
+
+<body class="background">
+
+    <div class="box">
+        
+
+        <h1 style="text-align: center;font-weight: 100;">Vowel checker</h1>
+
+        <div id="display" style="font-size: 20px;text-align: left;background-color: aquamarine;height: 50px;width: 90%;border-radius: 20px;text-align: center;padding-top: 40px;">Your answer omes here</div>
+
+        <h4 style="font-weight: 100;color: rgb(92, 92, 113);">Please Enter an Alphabet<input type="text" id="input" maxlength="1">
+        </h4>
+
+        <button onclick="checkvowel()">Check</button>
+        <br>
+        <br>
+
+    </div>
+
+</body>
+
+</html>

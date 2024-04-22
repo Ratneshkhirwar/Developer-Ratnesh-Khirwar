@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ratnesh Khirwar</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        font-weight: 100;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        scroll-behavior: smooth;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .frst-main-body {
+        margin-left: 45vh;
+        padding: 50px;
+        padding-top: 180px;
+    }
+
+    body {
+        background-color: rgba(4, 4, 4, 0.96);
+    }
+
+    .navbar {
+        background-color: rgba(29, 29, 29, 0.96);
+        height: 100vh;
+        width: 45vh;
+        position: fixed;
+    }
+
+    .logo {
+        padding: 50px;
+        font-size: 2.6rem;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+    }
+
+    .fr-logo {
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-size: 55px;
+        font-weight: 700;
+        margin: 10px;
+        font-style: normal;
+    }
+
+    .logo_pro::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        border-bottom: 5px solid rgb(255, 102, 0);
+        border-left: 5px solid rgb(255, 102, 0);
+        top: 100px;
+        left: 20px;
+        z-index: 2;
+    }
+
+    .logo_pro::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        border-top: 5px solid rgb(255, 102, 0);
+        border-right: 5px solid rgb(255, 102, 0);
+        top: 30px;
+        right: 70px;
+        z-index: 2;
+    }
+
+    .nav_list {
+        margin: 30px;
+        margin-top: 110px;
+        list-style: none;
+    }
+
+    .nav_list div {
+        margin: 25px;
+    }
+
+    .nav_list a {
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        width: 160px;
+        margin-left: 20px;
+    }
+
+    .home_nav {
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(255, 102, 0);
+    }
+
+    .nav_list a:hover {
+        color: orange;
+    }
+
+    .nav_list a:active,
+    i {
+        color: rgb(255, 102, 0);
+    }
+
+    .main {
+        width: 98%;
+        display: flex;
+    }
+
+    .head {
+        font-size: 1.3rem;
+    }
+
+    .name {
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-size: 3rem;
+        color: rgb(255, 102, 0);
+    }
+
+    #element {
+        color: rgb(255, 102, 0);
+    }
+
+    .about_text2 {
+        font-size: 1.5rem;
+    }
+
+    .more_button {
+        background-color: rgb(255, 102, 0);
+        height: 60px;
+        width: 230px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        border-radius: 500px;
+        margin-top: 50px;
+        border: none;
+    }
+
+    .more_button:hover {
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0 5px rgb(255, 113, 19),
+            0 0 10px rgb(255, 113, 19),
+            0 0 50px rgb(255, 113, 19),
+            0 0 200px rgb(255, 113, 19);
+        cursor: pointer;
+    }
+
+    .about_paragraph {
+        font-family: sans-serif;
+        font-size: 18px;
+    }
+
+    .text-school {
+        margin-top: 70px;
+    }
+
+    .school {
+        color: rgb(255, 102, 0);
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+    }
+
+    .school_name {
+        font-size: 38px;
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+    }
+
+    .about_img {
+        display: flex;
+        align-items: center;
+    }
+
+    .about_img img {
+        height: 350px;
+    }
+
+    .about_img::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-bottom: 10px solid rgb(255, 102, 0);
+        border-left: 10px solid rgb(255, 102, 0);
+        top: 520px;
+        left: 1030px;
+    }
+
+    .about_img::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-top: 10px solid rgb(255, 102, 0);
+        border-right: 10px solid rgb(255, 102, 0);
+        top: 120px;
+        right: 10px;
+    }
+
+    .heading-about {
+        font-size: 30px;
+    }
+
+    .hr1 {
+        margin-top: 10px;
+        height: 8px;
+        width: 150px;
+        background-color: rgb(255, 102, 0);
+    }
+
+    .hr2 {
+        height: 8px;
+        width: 70px;
+        margin-top: 9px;
+        background-color: rgb(255, 102, 0);
+    }
+
+    .about-head {
+        margin-top: 70px;
+    }
+
+    .about-head h1 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .about-skills {
+        height: 400px;
+        display: flex;
+    }
+
+    .frst-column {
+        height: 100%;
+        width: 26%;
+    }
+
+    .frst-column h3 {
+        font-size: 17px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .snd-column {
+        margin-left: 80px;
+        height: 100%;
+        width: 32%;
+    }
+
+    .snd-column h3 {
+        font-size: 17px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .thrd-column {
+        margin-left: 80px;
+    }
+
+    .thrd-column h3 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .html-skill-line {
+        background-color: white;
+        height: 5px;
+        width: 100%;
+    }
+
+    .html-skill-line div {
+        background-color: rgb(255, 102, 0);
+        height: 100%;
+        animation: html 2s forwards;
+    }
+
+    @keyframes html {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 69%;
+        }
+    }
+
+    .css-skill-line {
+        background-color: white;
+        height: 5px;
+        width: 100%;
+    }
+
+    .css-skill-line div {
+        background-color: rgb(255, 102, 0);
+        height: 100%;
+        animation: css 2s forwards;
+    }
+
+    @keyframes css {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 80%;
+        }
+    }
+
+    .js-skill-line {
+        background-color: white;
+        height: 5px;
+        width: 100%;
+    }
+
+    .js-skill-line div {
+        background-color: rgb(255, 102, 0);
+        height: 100%;
+        animation: js 2s forwards;
+    }
+
+    @keyframes js {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 56%;
+        }
+    }
+
+    .resume {
+        background-color: rgb(255, 102, 0);
+        font-family: 'Courier New', Courier, monospace;
+        width: 100%;
+        height: 70px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .resume:hover {
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0 60px rgb(255, 102, 0);
+    }
+
+    .project-list {
+        height: 70vh;
+        width: 156vh;
+        text-align: center;
+    }
+
+    .project-name {
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        margin: 10px;
+        margin-top: 30px;
+    }
+
+    .project-name img {
+        height: 99%;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .project-name img:hover {
+        height: 99%;
+        width: 100%;
+
+    }
+
+    .project-wrapp {
+        position: relative;
+    }
+
+    .project-text:hover {
+        opacity: .8;
+        box-shadow: 0 0 20px rgb(65, 65, 65)
+    }
+
+    .project-text {
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        z-index: 20;
+        background-color: rgb(0, 0, 0);
+        opacity: .0;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        transition: all .5s;
+        cursor: pointer;
+    }
+
+    .project-text h2 {
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    .first-row {
+        display: flex;
+    }
+
+    .second-row {
+        display: flex;
+    }
+
+    .main-div-contact {
+        height: 30vw;
+        display: flex;
+    }
+
+    .contact-info {
+        background-color: rgb(57, 57, 57);
+        margin: 20px;
+        height: 150px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .contact-info i {
+        margin-top: 20px;
+    }
+
+    .contact-info h3 {
+        font-size: 21px;
+    }
+
+    .contact-info h2 {
+        font-size: 21px;
+    }
+
+    .contact-text {
+        margin: 20px;
+        margin-left: 50px;
+    }
+
+    .message::-webkit-input {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -40px;
+    }
+
+    .contact-text input {
+        height: 50px;
+        width: 500px;
+        z-index: 6;
+        border-radius: 10px;
+        border: 1px solid rgb(255, 102, 0);
+        outline: 1px solid rgb(255, 102, 0);
+        background-color: transparent;
+        padding-left: 40px;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .contact-text input::-webkit-input-placeholder {
+        color: white;
+    }
+
+    .send-button {
+        background-color: rgb(255, 102, 0);
+        margin-left: 390px;
+        height: 50px;
+        width: 540px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .send-button h1 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .send-button:hover {
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0 60px rgb(255, 102, 0);
+    }
+
+    .contact-text textarea {
+        width: 460px;
+        height: 90px;
+        border-radius: 10px;
+        background-color: transparent;
+        border: 1px solid rgb(255, 102, 0);
+        outline: 1px solid rgb(255, 102, 0);
+        color: white;
+        overflow-x: hidden;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 20px 40px;
+    }
+
+    .contact-text textarea::-webkit-input-placeholder {
+        color: white;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .accounts {
+        background-color: rgba(0, 0, 0, 0.612);
+        height: 50px;
+        width: 270px;
+        position: fixed;
+        z-index: 100;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        backdrop-filter: blur(7px);
+        margin-left: 1150px;
+        gap: 20px;
+        border-radius: 50px;
+    }
+
+    .accounts div a i {
+        margin-top: 2px;
+        border-radius: 100px;
+        object-fit: cover;
+    }
+
+    .accounts-1 a i:hover {
+        transition: 1s all ease;
+        color: black;
+        background-color: white;
+        box-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+
+    .accounts-2 a i:hover {
+        transition: 1s all ease;
+        color: #00AFF0;
+        background-color: white;
+        box-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+
+    .accounts-3 a i:hover {
+        transition: 1s all ease;
+        color: #1877F2;
+        background-color: white;
+        box-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+
+    .accounts-4 a i:hover {
+        transition: 1s all ease;
+        color: #00AFF0;
+        background-color: white;
+        box-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+</style>
+
+<body>
+
+    <div class="accounts">
+        <div class="accounts-1">
+            <a href="https://github.com/Ratneshkhirwar/Developer-Ratnesh-Khirwar"><i class='bx bxl-github'></i></a>
+        </div>
+        <div class="accounts-2">
+            <a href="https://join.skype.com/invite/vL4e0F6gu3yU"><i class='bx bxl-skype'></i></a>
+        </div>
+        <div class="accounts-3">
+            <a href="https://www.facebook.com/priyesh.khirwar"><i class='bx bxl-facebook-circle'></i></a>
+        </div>
+        <div class="accounts-4">
+            <a href=""><i class='bx bxl-twitter'></i></a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="logo"><span class="logo_pro"><span class="fr-logo">R</span>atnesh</span></div>
+
+        <div class="nav_list">
+            <div><a href="#"><i class='bx bxs-home'></i><span class="home_nav">&emsp;Home</span></a></div>
+            <div><a href="#about"><i class='bx bx-user'></i>&emsp;About</a></div>
+            <div><a href="#Projects"><i class='bx bxs-inbox'></i>&emsp;Projects</a></div>
+            <div><a href="#contact"><i class='bx bx-message'></i>&emsp;Contacts</a></div>
+        </div>
+    </div>
+    <div class="frst-main-body">
+        <div class="main ">
+            <div>
+                <div class="head">
+                    <h1>Hello, my name is <span class="name">Ratnesh Khirwar</span></h1><br>
+                    <div class="about_text2">
+                        <h1>I'm a&ensp;<span id="element"></span></h1>
+                    </div>
+                    <br>
+                    <p class="about_paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, cumque ratione <br> cupiditate
+                        deleniti
+                        harum rem ut? Cumque quasi blanditiis est reprehenderit, dolor ad facere quaerat error
+                        similique.
+                        Deleniti, nostrum consectetur!
+                    </p>
+                </div>
+                <br>
+                <div class="more_button_div">
+                    <a href="#about">
+                        <button class="more_button">More About me</button>
+                    </a>
+                </div>
+                <div class="text-school">
+                    <h1 class="school_name">From <span class="school">Mount Carmel Convent School</span></h1>
+                </div>
+            </div>
+            <div>
+                <div class="about_img">
+                    <img src="./images/RAtneshimg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <div class="about" id="about">
+            <br>
+            <div class="heading-about">
+                <h1>About Me</h1>
+                <div class="hr1"></div>
+                <div class="hr2"></div>
+            </div>
+            <div class="about-head">
+                <div>
+                    <h1>I'm Ratnesh Khirwar and
+                        <span style="color: rgb(255, 102, 0);font-family: 'Courier New', Courier, monospace;">
+                            Full Stack Developer
+                        </span>
+                    </h1>
+                </div>
+                <br>
+                <br>
+                <div class="about-para">
+                    <p>
+                    <h3>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, incidunt. Aspernatur quia quis
+                        laborum unde, ullam dicta perferendis dolorem nostrum? Itaque hic recusandae eos
+                        molestias adipisci voluptas veritatis tempora voluptatibus! Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Quia dolor facilis nobis repellat aperiam quidem reprehenderit
+                        beatae, dicta explicabo deserunt odit? Sunt soluta rerum tempora voluptatem officia dignissimos
+                        omnis a.
+                    </h3>
+                    </p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="about-skills">
+                    <div class="frst-column">
+                        <h3>Birthday : 5 November 2010 </h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>Class : 8</h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>Section : A</h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>City : Katol</h3>
+                        <br>
+                        <hr>
+                    </div>
+                    <div class="snd-column">
+                        <h3>Age : 13</h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>Email : ratneshkhirwar00@gmail.com</h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>Phone : 9267921496</h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>State : Maharashtra</h3>
+                        <br>
+                        <hr>
+                    </div>
+                    <div class="thrd-column">
+                        <h3>HTML &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 69%</h3>
+                        <br>
+                        <div class="html-skill-line">
+                            <div></div>
+                        </div>
+                        <br>
+                        <h3>CSS &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp; 80%</h3>
+                        <br>
+                        <div class="css-skill-line">
+                            <div></div>
+                        </div>
+                        <br>
+                        <h3>JS &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp; 56%</h3>
+                        <br>
+                        <div class="js-skill-line">
+                            <div></div>
+                        </div>
+                        <br>
+                        <br>
+                        <a href="./resume.html" target="_blank"><button class="resume">Let's vist My Resume</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="heading-about" id="Projects">
+                <br>
+                <br>
+                <h1>Projects</h1>
+                <div class="hr1"></div>
+                <div class="hr2"></div>
+            </div>
+            <br>
+            <br>
+            <div class="project-list">
+                <div class="first-row">
+                    <div class="project-wrapp">
+                        <a href="./keyboard.html">
+                            <div class="project-name"><img src="./images/keyboardlogo.png.jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Keyboard</h2>
+                            </div>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="project-wrapp">
+                        <a href="./music.html">
+                            <div class="project-name"><img src="./images/musiclogo (1).jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Music Player</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapp">
+
+                        <a href="./calculator.html">
+                            <div class="project-name"><img src="./images/calculatorlogo.jpeg.jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Calculator</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-wrapp">
+                        <a href="./equal.html">
+                            <div class="project-name"><img src="./images/equal.jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Additional Calculator</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapp">
+                        <a href="./resume.html">
+                            <div class="project-name"><img src="./images/resumelogo.png.jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Resume</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <div class="project-wrapp">
+                        <a href="./addcont.html">
+                            <div class="project-name"><img src="./images/addCont.png" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Add Container</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapp">
+                        <a href="./kbc.html">
+                            <div class="project-name"><img src="./images/kbc.logo (1).jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Quiz</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapp">
+                        <a href="./electricbill.html">
+                            <div class="project-name"><img src="./images/electricbill.jpg" alt=""></div>
+
+
+                            <div class="project-text">
+                                <h2>Electric bill Calculator</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapp">
+                        <a href="./watch.html">
+                            <div class="project-name"><img src="./images/Clock.jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Clock</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapp">
+                        <a href="./chess.html">
+                            <div class="project-name"><img src="./images/chesslogo (1).jpg" alt=""></div>
+
+                            <div class="project-text">
+                                <h2>Chess</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="contact" id="contact">
+            <div class="projects">
+                <div class="heading-about" id="Projects">
+                    <h1>Contact</h1>
+                    <div class="hr1"></div>
+                    <div class="hr2"></div>
+                </div>
+                <br>
+                <br>
+
+                <div class="main-div-contact">
+                    <div>
+                        <div class="contact-info">
+                            <h1><i class='bx bx-home'></i><br></h1>
+                            <br>
+                            <h3>Ingale Layout, Panchawati, Katol</h3>
+                            <h2>441302</h2>
+                        </div>
+                        <div class="contact-info">
+                            <h1><i class='bx bx-phone'></i></h1>
+                            <br>
+                            <h2>+91 9267921496 <br>
+                                +91 8700264920</h2>
+                        </div>
+                        <div class="contact-info">
+                            <h1><i class='bx bx-envelope'></i></h1>
+                            <br>
+                            <h3>ratneshkhirwar00@gmail.com</h3>
+                        </div>
+                    </div>
+                    <div class="contact-text">
+                        <input type="text" placeholder="Username">
+                        <br>
+                        <br>
+                        <br>
+                        <input type="text" placeholder="Email">
+                        <br>
+                        <br>
+                        <br>
+                        <input type="text" placeholder="Phone">
+                        <br>
+                        <br>
+                        <br>
+                        <textarea name="" id="" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <button class="send-button">
+                    <h1>Send</h1>
+                </button>
+                <br>
+                <br>
+
+            </div>
+        </div>
+</body>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Artist', 'Video Editor', 'Web Designer', 'Full Stack Developer'],
+        typeSpeed: 80,
+    });
+</script>
+
+</html>
