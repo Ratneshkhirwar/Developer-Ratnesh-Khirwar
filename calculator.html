@@ -1,66 +1,93 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
 
-<body background="./images/black10.png"
-    style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+<body style="background-color: #2a2a2a;">
 </body>
 <title></title>
 <style>
     .background {
         background-color: rgb(33, 33, 33);
-        height: 640px;
-        width: 430px;
-        padding: 20px;
+        height: 70.5027777754vh;
+        width: 25.0833333316vw;
         border-radius: 20px;
         border-style: solid;
-        margin: 50px;
+        margin: 20px;
         margin-left: 450px;
+        overflow-y :auto;
+        overflow-x: hidden;
     }
+
+
 
     .number {
         background-color: #5f5f5f;
         color: white;
+        border: none;
     }
 
     button {
-        height: 77px;
-        width: 97px;
-        margin: 5px;
-        border-radius: 20px;
+        height: 10.500022222188vh;
+        width: 6.23611111068vw;
+        margin: 1px;
         cursor: pointer;
-
+        border: none;
     }
-    button:hover{
+
+    button:hover {
         background-color: rgb(157, 157, 157);
     }
+
     button:active {
         background-color: rgb(218, 218, 218);
     }
 
     .orange {
-        background-color: #2a2a2a;
-        border-radius: 50px;
-        color: greenyellow;
-
+        background-color: orange;
+        color: rgb(255, 255, 255);
+        border: none;
     }
 
     .Numberkeys {
         background-color: #2a2a2a;
-        border-radius: 50px;
-        color: greenyellow;
+
+        color: rgb(255, 255, 255);
         background-color: #454545;
+        border: none;
+    }
+
+    .orange:hover{
+        background-color: rgb(255, 184, 53);
+    }
+
+    .orange:active{
+        background-color: rgb(255, 200, 99);
+    }
+
+    .orangekey:active{
+        background-color: rgb(255, 200, 99);
     }
 
     .orangekey {
         background-color: orange;
         color: azure;
-        border-radius: 50px;
+        border: none;
     }
-    .orangekey:hover{
-        background-color: rgb(255, 199, 94);
+
+    .orangekey:hover {
+        background-color: rgb(255, 184, 53);
+    }
+
+    textarea{
+        resize: none;
+        scroll-behavior: auto;
+    }
+
+    textarea::-webkit-scrollbar{
+        opacity: 1;
+        width: 5px;
+        background-color: white;
     }
 </style>
 <!-- script -->
@@ -72,7 +99,7 @@
         displayString = displayString + passnumber.toString();
         document.getElementById("display").innerHTML = displayString;
     }
-   
+
     function add() {
         total = Number(displayString);
         displayString = "";
@@ -80,7 +107,7 @@
         document.getElementById("display").innerHTML = displayString;
     }
     function sub() {
-        total = Number (displayString);
+        total = Number(displayString);
         displayString = "";
         action = 2;
         document.getElementById("display").innerHTML = displayString;
@@ -92,47 +119,47 @@
         document.getElementById("display").innerHTML = displayString;
     }
     function div() {
-        total =  Number (displayString);
+        total = Number(displayString);
         displayString = "";
         action = 4;
         document.getElementById("display").innerHTML = displayString;
     }
     function per() {
-        total = Number(displayString); 
+        total = Number(displayString);
         displayString = "";
         action = 5;
         document.getElementById("display").innerHTML = displayString;
     }
     function clearFunction() {
-        total=0;
-        displayString="";
+        total = 0;
+        displayString = "";
         document.getElementById("display").innerHTML = "";
     }
     function showresult() {
-        if (action == 1){
-            total = total + Number (displayString)
+        if (action == 1) {
+            total = total + Number(displayString)
         }
-        if (action == 2){
-            total = total - Number (displayString)
+        if (action == 2) {
+            total = total - Number(displayString)
         }
-        if (action == 3){
-            total = total * Number (displayString)
+        if (action == 3) {
+            total = total * Number(displayString)
         }
-        if (action == 4){
-            total = total / Number (displayString)
+        if (action == 4) {
+            total = total / Number(displayString)
         }
         if (action == 5) {
-            total = total % Number (displayString)
+            total = total % Number(displayString)
         }
         displayString = total
         document.getElementById("display").innerHTML = displayString;
-        
+
     }
     function Backspace() {
-        displayString=displayString.substring(0, displayString .length -1);
+        displayString = displayString.substring(0, displayString.length - 1);
         document.getElementById("display").innerHTML = displayString;
     }
-    
+
 </script>
 </head>
 
@@ -141,23 +168,24 @@
     <main class="background">
 
         <!-- result box -->
-        <h1 id="display" type="text" readonly 
-        style="
-            background-color: rgb(187, 187, 187);
-            height: 105px;
-            border-radius: 20px;
-            border-style: solid;
-            width: 370px;
+        <textarea id="display" type="text" readonly style="
+            background-color: rgba(187, 187, 187, 0);
+            height: 10.00333333vh;
+            width:22.6944444428vw;
             text-align: right;
-            padding-top: 55px;
-            padding-right: 50px;
-          "> </h1>
+            padding-top: 2.736111111vw;
+            padding-left: 15px;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+          "> </textarea>
 
         </div>
         <!-- button -->
-        <div>
-            <div style="float: left;">
-                
+        <div class="button-all" style="display: flex;">
+            <div>
+
                 <div class="key"><button class="Numberkeys" onclick="clearFunction()">AC</button></div>
                 <div class="key"><button class="number" onclick=" numbertype(7)">7</button></div>
                 <div class="key"><button class="number" onclick=" numbertype(4)">4</button></div>
@@ -165,7 +193,7 @@
                 <div class="key"><button class="number" onclick="Backspace()">←</button></div>
             </div>
 
-            <div style="float: left;">
+            <div>
                 <div class="key"><button class="Numberkeys">+/-</button></div>
                 <div class="key"><button class="number" onclick=" numbertype(8)">8</button></div>
                 <div class="key"><button class="number" onclick=" numbertype(5)">5</button></div>
@@ -173,7 +201,7 @@
                 <div class="key"><button class="number" onclick=" numbertype(0)">0</button></div>
             </div>
 
-            <div style="float: left;">
+            <div>
                 <div class="key"><button class="Numberkeys" onclick="per('%')">%</button></div>
                 <div class="key"><button class="number" onclick=" numbertype(9)">9</button></div>
                 <div class="key"><button class="number" onclick=" numbertype(6)">6</button></div>
@@ -181,7 +209,7 @@
                 <div class="key"><button class="number" onclick=" numbertype('.')">.</button></div>
             </div>
 
-            <div style="float: left;">
+            <div>
                 <div class="key"><button class="orange" onclick="div()">/</button></div>
                 <div class="key"><button class="orange" onclick="mul()">x</button></div>
                 <div class="key"><button class="orange" onclick="sub()">-</button></div>
